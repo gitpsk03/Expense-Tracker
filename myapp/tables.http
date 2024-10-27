@@ -1,47 +1,73 @@
+###
 
 POST http://localhost:3000/transactions/
 Content-Type: application/json
 
 {
-    "id": 5,
+    "id": 3,
     "type": "Expense",
     "category": "Order",
-    "amount": 10000,
+    "amount": 1000,
     "date": "2024-10-24",
-    "description": "Amazon Order"
+    "description": "Order Payment"
 }
+
+###
 
 GET http://localhost:3000/transactions/?offset=0&limit=10&order_by=id&order=ASC
 
 
-GET http://localhost:3000/transactions/5/
+###
+GET http://localhost:3000/transactions/1/
 
 
-PUT http://localhost:3000/transactions/4/
+###
+PUT http://localhost:3000/transactions/3/
 Content-Type: application/json
 
 {
-    "type": "Income",
-    "category": "Salary",
-    "amount": 20000,
+    "type": "Expense",
+    "category": "Order",
+    "amount": 2000,
     "date": "2024-10-24",
     "description": "SBI Payments"
 }
 
 
+###
 DELETE http://localhost:3000/transactions/1/
 
 
+###
 GET http://localhost:3000/summary/
 
+
+###
 
 POST http://localhost:3000/user/
 Content-Type: application/json
 
-{
-    "name": "rahul",
-    "username": "rahul123",
-    "password": "rahul@456",
-    "gender": "Male",
-    "location": "hyderabad"
+{   
+    "name":"kalyani",
+    "username":"kalyani19",
+    "password": "kalyani@09",
+    "gender": "Female",
+    "location":"Hyderabad"
 }
+
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username":"kalyani19",
+    "password": "kalyani@09"
+}
+
+
+###
+
+GET http://localhost:3000/transactions/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImthbHlhbmkxOSIsImlhdCI6MTcyOTk0Njg2M30.igKyBkNDO3YC-4r5WdhoRAlu327VZNy4WsbtBSb87d4
