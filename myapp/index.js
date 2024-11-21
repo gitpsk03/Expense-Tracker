@@ -180,7 +180,7 @@ app.post('/user/', async (request, response) => {
     response.send('User Already Exists')
   }
 })
-+
+
 //login API
 app.post('/login/', async (request, response) => {
   const {username, password} = request.body
